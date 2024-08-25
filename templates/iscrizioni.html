@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Iscrizioni</title>
+</head>
+<body>
+    <h1>Elenco Iscrizioni</h1>
+    <ul>
+        {% for iscrizione in iscrizioni %}
+        <li>ID: {{ iscrizione['id'] }}, Nome: {{ iscrizione['nome'] }}, Email: {{ iscrizione['email'] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Torna all'Iscrizione</a>
+</body>
+</html>
